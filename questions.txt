@@ -1,4 +1,6 @@
 -Quelle librairie allez vous utiliser pour gérer l'état de l'application ?
+Je vais utiliser la librairie Redux pour gérer l'etat de l'application, cette librairie est très intéressante 
+car on peut debugger facilement dessus et elle est facile à tester
 
 -Quelles sont les pages nécessaires ?
 Les pages nécessaires seront : les 2 forms signIn et signUp pour un utilisateur ainsi qu'un signIn pour l'admin
