@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {Link} from "react-router-dom"
+import {Link} from 'react-router-dom'
+import '../style/articleList.css'
 
 export default class articleList extends Component {
     constructor(props){
@@ -13,7 +14,6 @@ export default class articleList extends Component {
 
     componentDidMount(){
         axios.get("https://jsonplaceholder.typicode.com/posts").then((apiRes) => {
-            console.log(apiRes)
             this.setState({listArticle: apiRes.data})
         }).catch((error) => {
             console.log(error)
@@ -30,7 +30,7 @@ export default class articleList extends Component {
                 <h1>Article List</h1>
                 {listArticle.length ? listArticle.map((article) => (
                     <div key={article.id}>
-                        <Link to={() => `/article/${article.id}`}>
+                        <Link className="link" to={() => `/article/${article.id}`}>
                         {article.title}
                         </Link>
                     </div>

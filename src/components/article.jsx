@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {Link} from "react-router-dom"
-
-
+import '../style/article.css'
 
 export default class article extends Component {
 
@@ -17,7 +16,6 @@ export default class article extends Component {
 
     componentDidMount(){
         axios.get("https://jsonplaceholder.typicode.com/posts/" + this.state.id).then((apiRes) =>{
-            console.log(apiRes)
             this.setState({
                 title: apiRes.data.title,
                 body:apiRes.data.body
