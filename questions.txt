@@ -1,7 +1,28 @@
 -Quelle librairie allez vous utiliser pour gérer l'état de l'application ?
+
 -Quelles sont les pages nécessaires ?
+Les pages nécessaires seront : les 2 forms signIn et signUp pour un utilisateur ainsi qu'un signIn pour l'admin
+il y aura une page pour l'ajout d'un template (en tant qu'admin), une page pour accéder aux documents générés (en tant qu'utilisateur)
+ainsi qu'un form pour que l'utilisateur puisse générer un document depuis un template 
+
 -Comment allez-vous agencer votre navigation ?
+Grâce au conditional rendering j'afficherais sur ma nav bar les menus au-quels 
+l'utilisateur peut accéder ou l'admin (si connecté en tant qu'admin)
+
+
 -Quelles sont les requêtes d'api dont vous allez avoir besoin au minimum ?
+Je vais avoir besoin des requêtes api suivantes CRUD()(utilisateur), 
+ensuite un create() de template pour l'admin, 
+l'utilisateur doit pouvoir read() ses documents générés,
+et l'utilisateur doit pouvoir create() un document depuis un template
+
 -Comment allez-vous gérer l'exécution des requêtes d'api et le retour asynchrone de celles-ci ?
+je vais pouvoir gérer l'exécution des requêtes api grâce aux promises avec les .then() et un .catch() si il y a une erreur
+
 -Comment allez-vous gérer l'authentification ?
+Je gère l'authentification grâce à un form signIN avec email (ou pseudo) et mdp, les comptes seront crées avec un form signUP et enregistrer en DB
+
 -Bonus: Vous devez mettre en place une version "dark" optionnel dans l'application. Comment allez-vous procéder ?
+
+Je met en place un switch sur le site pour passer du dark au light, ensuite j'écris du CSS (sur le body) et j'active ce CSS en fonction du switch,
+notamment grâce aux media-queries
