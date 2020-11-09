@@ -14,9 +14,9 @@ function App() {
       <div className="App">
         <Switch>
           <Redirect exact from="/" to="/list" />
-          <Route exact path="/list" component={ArticleList} />
-          <Route exact path="/article/:id" component={Article} />
-          <Route exact path="**">
+          <Route path="/list" component={ArticleList} />
+          <Route path="/article/:id" component={Article} />
+          <Route path="">
             <Redirect to="/list" />
           </Route>
         </Switch>
